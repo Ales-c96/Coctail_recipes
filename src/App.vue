@@ -1,11 +1,17 @@
 <script setup>
-
+import { RouterView } from "vue-router";
+import Header from "./components/Header.vue";
+import Modal from "./components/Modal.vue";
+import Notification from "./components/Notification.vue";
 </script>
 
 <template>
-<h1>desde pinia</h1>
+  <Header />
+  <Modal />
+  <Notification />
+  <main class="container mx-auto mt-10">
+    <RouterView />
+  </main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
