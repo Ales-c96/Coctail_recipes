@@ -1,6 +1,11 @@
 # coctail-recipes
 
-This template should help get you started developing with Vue 3 in Vite.
+## Libraries documentation
+### Fomrkit:
+https://formkit.com/essentials/
+
+### Tailwind:
+https://tailwindcss.com/
 
 ## Recommended IDE Setup
 
