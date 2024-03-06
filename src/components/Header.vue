@@ -27,13 +27,13 @@ const handleSubmit = () => {
 <template>
   <header class="bg-slate-700" :class="{ header: homeView }">
     <div class="mx-auto container px-5 py-16">
-      <div class="flex justify-between items-center">
+      <div class="w-full flex justify-between items-center">
         <div>
           <RouterLink :to="{ name: 'home' }">
             <img class="w-32" src="/img/logo.svg" alt="Logo de la web de recetas" />
           </RouterLink>
         </div>
-        <nav class="flex gap-4 text-white">
+        <nav class="flex gap-4 text-white right-56">
           <RouterLink
             :to="{ name: 'home' }"
             class="font-bold uppercase"
@@ -96,7 +96,7 @@ const handleSubmit = () => {
 
 <style scoped>
 .header {
-  background-image: url("/img/bg.jpg");
+  background-image: url("/img/bg.webp");
   background-size: cover;
   background-position: center;
 }

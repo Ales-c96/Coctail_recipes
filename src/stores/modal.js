@@ -8,13 +8,13 @@ export const useModalStore = defineStore("modal", () => {
   const drinksStore = useDrinksStore();
   const show = ref(false);
 
-  const buttonText = computed(() => {
-    return favoritesStore.drinkExists(drinksStore.recipe.idDrink) ? 'Eliminar de Favoritos' : 'Agregar a Favoritos';
+  const isInFavorites = computed(() => {
+    return favoritesStore.drinkExists(drinksStore.recipe.idDrink);
   });
 
   function handleClick() {
     show.value = !show.value;
   }
 
-  return { show, buttonText, handleClick };
+  return { show, isInFavorites, handleClick };
 });

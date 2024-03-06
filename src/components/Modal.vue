@@ -58,7 +58,7 @@ const formatIngredient = () => {
             >
               <div>
                 <div class="mt-3">
-                  <DialogTitle as="h3" class="tex-gray-900 text-4xl font-extrabold my-5">
+                  <DialogTitle as="h3" class="tex-gray-900 text-4xl font-extrabold my-5 text-gray-800">
                     {{ drinksStore.recipe.strDrink }}
                   </DialogTitle>
                   <img
@@ -66,11 +66,11 @@ const formatIngredient = () => {
                     :alt="`Imagen de ${drinksStore.recipe.strDrink}`"
                     class="mx-auto w-96"
                   />
-                  <DialogTitle as="h3" class="tex-gray-900 text-4xl font-extrabold my-5">
+                  <DialogTitle as="h3" class="tex-gray-900 text-4xl font-extrabold my-5 text-gray-800">
                     Ingredientes y Cantidades
                   </DialogTitle>
                   <div v-html="formatIngredient().outerHTML"></div>
-                  <DialogTitle as="h3" class="tex-gray-900 text-4xl font-extrabold my-5">
+                  <DialogTitle as="h3" class="tex-gray-900 text-4xl font-extrabold my-5 text-gray-800">
                     Instrucciones
                   </DialogTitle>
                   <p class="text-lg text-gray-500">{{ drinksStore.recipe.strInstructions }}</p>
@@ -89,7 +89,7 @@ const formatIngredient = () => {
                   class="w-full rounded bg-orange-600 p-3 font-bold uppercase text-white shadow hover:bg-oranges-700"
                   @click="favoritesStore.handleClickFavorites()"
                 >
-                  {{ modalStore.buttonText }}
+                  {{ modalStore.isInFavorites ? 'Eliminar de Favoritos' : 'Agregar a Favoritos' }}
                 </button>
               </div>
             </DialogPanel>

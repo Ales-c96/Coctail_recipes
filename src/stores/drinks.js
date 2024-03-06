@@ -19,6 +19,9 @@ export const useDrinksStore = defineStore("drinks", () => {
       data: { drinks },
     } = await apiService.getCategories();
     categories.value = drinks;
+    
+    const resp = await apiService.getDrinksByLetter('d');
+    recipes.value = resp.data.drinks;
   });
 
   async function searchRecipes() {
